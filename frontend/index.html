@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Search Engine</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>
+        <i class="fas fa-search"></i> Image Search
+      </h1>
+      <p class="subtitle">Search for images from across the web</p>
+    </header>
+
+    <div class="search-section">
+      <div class="search-box">
+        <i class="fas fa-search search-icon"></i>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Enter search term..."
+          autofocus
+        />
+        <button id="clearBtn" class="clear-btn" aria-label="Clear">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="search-actions">
+        <button id="searchBtn" class="btn btn-primary">
+          <i class="fas fa-search"></i> Search
+        </button>
+        <button id="recentBtn" class="btn btn-secondary">
+          <i class="fas fa-history"></i> Recent
+        </button>
+      </div>
+    </div>
+
+    <div id="statusMessage" class="status-message"></div>
+
+    <div id="resultsContainer" class="results-container">
+      <div class="empty-state">
+        <i class="fas fa-images"></i>
+        <h3>Search for images</h3>
+        <p>Enter a search term to find images from across the web</p>
+      </div>
+    </div>
+
+    <div id="pagination" class="pagination" style="display: none;">
+      <button id="prevPage" class="page-btn">
+        <i class="fas fa-chevron-left"></i> Prev
+      </button>
+      <span id="pageInfo">Page 1</span>
+      <button id="nextPage" class="page-btn">
+        Next <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
